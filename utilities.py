@@ -29,17 +29,13 @@ def cosine_similarity(a, b):
     return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
 
 
-def empty_folder(path):
+def create_folder(path):
     # if folder does not exist, create it
     if not os.path.exists(path):
         os.makedirs(path)
-    
-    # remove all files in folder
-    for file in os.listdir(path):
-        os.remove(os.path.join(path, file))
 
 
-def is_model_present(model_name):
-    p = c.MODELS_DIR + model_name
+def is_model_present(model_folder_name):
+    p = c.MODELS_DIR + model_folder_name
     # return true if there are files in the folder
     return os.path.exists(p) and len(os.listdir(p)) > 0

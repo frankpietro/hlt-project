@@ -21,6 +21,10 @@ STANCE = "stance"
 SCORE = "score"
 
 # default values for sentence embedding model
-DEF_MAX_SEQ_LENGTH = 200
 DEF_BATCH_SIZE = 16
 DEF_EPOCHS = 8
+DEF_LEARNING_RATE = 2e-5
+
+# losses constants
+CONTRASTIVE_LOSS = 0
+COSINE_SIMILARITY_LOSS = 1
